@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/homedesk.css">     
+    <title>SweetMimi</title>
+</head>
+<body>
+    <div id="contenedor">
+        {% include "header.html" %}
+        {% include "nav.html" %}
+        <main >
+            {%for i in data%}
+            <div id="producto">                
+                <img class="imgp" src="{{i.Imagen}}" alt="mimo">
+                <h1>{{i.Id}}-{{i.Nombre}}</h1>                              
+            </div>
+            {%endfor%} 
+            
+        </main>
+        {% include "footer.html" %}
+         
+    </div>
+    
+</body>
+</html>
