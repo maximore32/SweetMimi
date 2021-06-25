@@ -2,6 +2,7 @@ var express = require('express');
 const nunjucks = require('nunjucks');
 var bodyParser = require('body-parser')
 var	app = express();
+app.use(express.static('public'));
 
 nunjucks.configure('views', {
   autoescape: true,
@@ -12,7 +13,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = 'xxxx';
+const MONGO_URL ="mongodb+srv://maximusbrain:masterit@cluster0.6di0t.mongodb.net/testsoni?retryWrites=true&w=majority";
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {    

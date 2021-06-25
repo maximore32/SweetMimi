@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/homedesk.css">     
+    <link rel="stylesheet" href="css/home.css">     
     <title>SweetMimi</title>
 </head>
 <body>
@@ -12,6 +12,10 @@
         {% include "header.html" %}
         {% include "nav.html" %}
         <main >
+            <div id="texto">
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sit consequuntur nulla dolor architecto. Ut consectetur deleniti laudantium molestiae quaerat. Reprehenderit rerum impedit ab eveniet itaque at sequi porro deserunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam praesentium, iusto at eligendi fuga illo voluptatibus dolore natus. Eum, delectus quia molestiae fugit deserunt quo sint, illo, cumque tempore harum quis quasi ex neque voluptate nobis? Eos distinctio quae omnis asperiores, commodi perspiciatis delectus provident dicta officia et dolore eligendi.
+                </p>
+            </div>            
             {%for i in data%}
             <div id="producto">                
                 <img class="imgp" src="{{i.Imagen}}" alt="mimo">
