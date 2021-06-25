@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 var bodyParser = require('body-parser')
 var	app = express();
 app.use(express.static('public'));
+const port = process.env.PORT || 8080;
 
 nunjucks.configure('views', {
   autoescape: true,
@@ -25,4 +26,4 @@ app.get('/', (req, res)=>{
 });
 
 
-app.listen(8080);
+app.listen(port);
