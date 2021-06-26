@@ -19,7 +19,9 @@
             {%for i in data%}
             <div id="producto">                
                 <img class="imgp" src="{{i.Imagen}}" alt="mimo">
-                <h1>{{i.Id}}-{{i.Nombre}}</h1>                              
+                <h1>{{i.Id}}-{{i.Nombre}}</h1>
+                <h2>{{i.Precio}}</h2>
+                <p>{{i.Descripción}}</p>                          
             </div>
             {%endfor%} 
             
