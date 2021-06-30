@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/home.css">     
-    <title>SweetMimi</title>
+    <title>{{plato}}</title>
+    <link rel="stylesheet" href="../css/home.css">
 </head>
 <body>
     <div id="contenedor">
@@ -17,18 +16,16 @@
                 </p>
             </div>           
             <div id="producto">
-                {% for i in data[0] %}                                
-                    <img class="imgp" src="{{i.Imagen}}" alt="mimo">
-                    <h1>{{i.id}}-{{i.Nombre}}</h1>
-                    <h2><a href="/plato/{{ i.id }}">{{i.Precio}}</a></h2>                    
-                    <p>{{i.Descripción}}</p>            
-                {% endfor %}             
+                    <h1>{{id}}-{{plato}}</h1>                           
+                    <img class="imgp" src="{{img}}" alt="mimo">                    
+                    <h2>{{precio}}</h2>                    
+                    <p>{{descripcion}}</p>            
+                           
             </div>
             
         </main>
         {% include "footer.html" %}
          
     </div>
-    
 </body>
-</html> 
+</html>
