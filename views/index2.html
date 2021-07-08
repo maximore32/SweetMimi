@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Login</title>
+    <style>
+      body{
+        margin: 0;
+        padding: 0;
+        background-image: url(https://th.bing.com/th/id/OIP.kAeCCzINuONr39j_87zIlQHaEU?w=286&h=183&c=7&o=5&pid=1.7);
+        
+              
+
+      }
+      #contenedor{
+        margin: 0 auto;
+        width: 90%;        
+        text-align: center;        
+         
+      }
+
+      h1{
+        font-family:Georgia, 'Times New Roman', Times, serif;
+        color: brown;
+
+
+      }
+
+
+      form>input{
+        width: 12%;
+        margin: 0 auto;
+        margin-top: 20px;
+      }
+      @media (min-width: 306px){
+        form>input{
+          width: 18%;          
+        }
+        h1{
+          font-size: 3em;
+          color: lightyellow;
+        }
+      }
+    </style>
+  <head>
+  <body>
+    <div id="contenedor"> 
+      <h1>Inicie sesión</h1> 
+     <form method="post" action="/login">      
+       <input type="text" name="user" placeholder="Usuario..." required>
+       <input type="password" name="pass" placeholder="Password..." required>
+       <input type="submit" value="Login">
+     </form>
+    </div> 
+  <body>
+<html>
