@@ -25,7 +25,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL|| "mongodb+srv://maximusbrain:defensa143@cluster0.6di0t.mongodb.net/testsoni?retryWrites=true&w=majority";
+const MONGO_URL = process.env.SONIURL;-
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
