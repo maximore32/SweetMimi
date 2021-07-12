@@ -25,7 +25,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL;-
+const MONGO_URL = process.env.SONIURL||"mongodb+srv://maximusbrain:defensa143@cluster0.6di0t.mongodb.net/testsoni?retryWrites=true&w=majority";
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -211,7 +211,7 @@ app.get('/logout', function (req, res) {
           fs.mkdirSync(dir);
         }
         //foto.mv(__dirname + '/img/'+ req.files.foto.name, function(err) {
-        foto.mv(__dirname + '/public/img/'+ req.files.foto.name.jpg, function(err) {
+        foto.mv(__dirname + '/public/img/'+ req.files.foto.name, function(err) {
           if (err)
             return res.status(500).send(err); 
             res.send('<p>Agregado exitosamente</p><p><a href="/content">Agregar Dulce</a></p><p><a href="/logout">Cerrar Sesión</a></p>'+ req.files.foto.name);
@@ -222,7 +222,7 @@ app.get('/logout', function (req, res) {
 
   // Recibimos la información del formulario de alta de categorias e insertamos en la base de datos
 app.post('/altacategoria', (req, res)=>{
-  MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
+  MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => { 
   const dbo = db.db("testsoni")
   // key de la base datos : req.body.name_campo_formulario
   dbo.collection("categorias").insertOne(
@@ -240,5 +240,39 @@ app.post('/altacategoria', (req, res)=>{
       res.send('<p>Categoria agregada exitosamente</p><p><a href="/categorias">Agregas otra categoria</a></p><p><a href="/content">Agregar Dulce</a></p><p><a href="/logout">Cerrar Sesión</a></p>')
   })
 })
+
+
+// Buscador de personajes
+app.get('/Resultado', (req, res)=>{
+      //Obtenemos el valor del término de búsqueda. El que viene luego de ?
+      var termino = req.query.busqueda;  
+      // Creamos la expresión regular para poder verificar que contenga el término el nombre en la base de datos. La i significa no sensible a may/min
+      var expresiontermino = new RegExp(termino,"i");
+  MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {
+    const dbo = db.db("testsoni");
+  const data = [];
+  // Obtenemos la id de la URL y la convertimos a entero
+  var id = parseInt(req.params.id);
+  dbo.collection("dulce").find().toArray()
+  .then((dataplatos) => { 
+// en data[0] quedan los platos
+  data.push(dataplatos)
+  })
+      .then(() => {
+        //Consultamos en la base las categorías
+          dbo.collection("categorias").find().toArray()
+          .then((datacategorias) => { 
+      // en data[1] quedan los categorias
+            data.push(datacategorias)                 
+          }) 
+        })
+      .then(()=>{
+        const dbo = db.db("testsoni");    
+        dbo.collection("dulce").find({"Nombre":{$regex: expresiontermino }}).toArray(function(err, dat) {	      
+          res.render('resultado.html',{termino:termino,dat:dat,data:data});
+        });
+      })
+});	
+});
 
 app.listen(port);

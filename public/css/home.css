@@ -28,6 +28,9 @@ body{
     
     
 }
+#menu :hover{
+    color: blueviolet;
+}
 #menu ul{
     background-color: lightcoral; 
     display: flex;
