@@ -3,6 +3,7 @@ const nunjucks = require('nunjucks');
 var bodyParser = require('body-parser')
 var	app = express();
 app.use(express.static('public'));
+const imageToBase64 = require('image-to-base64');
 const port = process.env.PORT || 8080;
 
 const fileUpload = require('express-fileupload');
@@ -25,7 +26,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL||"mongodb+srv://maximusbrain:defensa143@cluster0.6di0t.mongodb.net/testsoni?retryWrites=true&w=majority";
+const MONGO_URL = process.env.SONIURL;
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -202,6 +203,19 @@ app.get('/logout', function (req, res) {
           })
           if (!req.files)
           return res.status(400).send('No files were uploaded.');
+
+
+          imageToBase64("/public/img/") // Path to the image
+    .then(
+        (foto) => {
+            console.log(foto); // "cGF0aC90by9maWxlLmpwZw=="
+        }
+    )
+    .catch(
+        (error) => {
+            console.log(error); // Logs an error if there was one
+        }
+    )
        
         
         let foto = req.files.foto;
