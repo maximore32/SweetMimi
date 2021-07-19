@@ -25,8 +25,11 @@ nunjucks.configure('views', {
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended: true }))
 
+app.use(express.json());
+app.use(express.urlencoded({extended: false}));
+
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL;
+const MONGO_URL = process.env.SONIURL ;
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -180,59 +183,44 @@ app.get('/logout', function (req, res) {
   
   // Recibimos la información del formulario de alta de platos e insertamos en la base de datos
   app.post('/altadulce', (req, res)=>{
+    if(req.body.nombre && req.body.precio)
+    {
       MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
       const dbo = db.db("testsoni")
-      // key de la base datos : req.body.name_campo_formulario
-      dbo.collection("dulce").insertOne(
-          {   
-              id:parseInt(req.body.id),
-              Nombre: req.body.nombre,            
-              Descripción:req.body.descripcion,
-              Precio: req.body.precio,
-              Categoria:req.body.categoria,
-              Imagen:req.files.foto.name
+      var foto = req.files.foto;
+      foto.mv(__dirname + '/img/'+ foto.name,function(){
+        imageToBase64(__dirname + '/img/'+ foto.name)
+        .then(
+            (fotobase64) => {
+                console.log(fotobase64);
+                dbo.collection("dulce").insertOne({
+                  Nombre: req.body.nombre,            
+                  Descripción:req.body.descripcion,
+                  Precio: req.body.precio,
+                  Categoria:req.body.categoria,
+                  Imagen: fotobase64,                  
+              },
+              function (err, res) {
+                  db.close();
+                  if (err) {              
+                    return console.log(err);    
+                  }
+              })
+              res.render('formudulces.html',{mensaje:"Alta exitosa de "+req.body.nombre});              
+            }
+        )    
+        var fotobase64 = req.files.img.name;      
+      });
   
-              
-          },
-          function (err, res) {
-              if (err) {
-              db.close();
-              return console.log(err);
-              }
-              db.close()
-          })
-          if (!req.files)
-          return res.status(400).send('No files were uploaded.');
-
-
-          imageToBase64("/public/img/") // Path to the image
-    .then(
-        (foto) => {
-            console.log(foto); // "cGF0aC90by9maWxlLmpwZw=="
-        }
-    )
-    .catch(
-        (error) => {
-            console.log(error); // Logs an error if there was one
-        }
-    )
-       
-        
-        let foto = req.files.foto;
-        console.log(foto)
-       
-        if (!fs.existsSync(dir)){
-          fs.mkdirSync(dir);
-        }
-        //foto.mv(__dirname + '/img/'+ req.files.foto.name, function(err) {
-        foto.mv(__dirname + '/public/img/'+ req.files.foto.name, function(err) {
-          if (err)
-            return res.status(500).send(err); 
-            res.send('<p>Agregado exitosamente</p><p><a href="/content">Agregar Dulce</a></p><p><a href="/logout">Cerrar Sesión</a></p>'+ req.files.foto.name);
-        });
-          
       })
+    }
+    else{
+      // Ingresamos al formualario sin insertar datos
+      res.render('formudulces.html');      
+    }
   })
+
+
 
   // Recibimos la información del formulario de alta de categorias e insertamos en la base de datos
 app.post('/altacategoria', (req, res)=>{
