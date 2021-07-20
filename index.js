@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL ;
+const MONGO_URL = process.env.SONIURL;
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -187,9 +187,9 @@ app.get('/logout', function (req, res) {
     {
       MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
       const dbo = db.db("testsoni")
-      var foto = req.files.foto;
-      foto.mv(__dirname + '/img/'+ foto.name,function(){
-        imageToBase64(__dirname + '/img/'+ foto.name)
+      var foto = req.files.img;
+      foto.mv(__dirname + '/public/img/'+ foto.name,function(){
+        imageToBase64(__dirname + '/public/img/'+ foto.name)
         .then(
             (fotobase64) => {
                 console.log(fotobase64);
