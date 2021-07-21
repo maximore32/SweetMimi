@@ -29,7 +29,7 @@ app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL;
+const MONGO_URL = process.env.SONIURL ;
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -198,7 +198,8 @@ app.get('/logout', function (req, res) {
                   Descripción:req.body.descripcion,
                   Precio: req.body.precio,
                   Categoria:req.body.categoria,
-                  Imagen: fotobase64,                  
+                  Imagen: fotobase64,
+                  id:parseInt(req.body.id)                 
               },
               function (err, res) {
                   db.close();
