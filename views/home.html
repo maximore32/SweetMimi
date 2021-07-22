@@ -19,7 +19,7 @@
             
                 {% for i in data[0] %}
                 <div id="producto">                               
-                    <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}"alt="mimo">                    
+                    <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}"alt="mimo" width="200 px">                    
                     <h1>{{i.id}}-{{i.Nombre}}</h1>
                     <h2><a href="/plato/{{ i.id }}">{{i.Precio}}</a></h2>                    
                     
