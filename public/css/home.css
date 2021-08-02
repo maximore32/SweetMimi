@@ -13,19 +13,6 @@ body{
     min-width: 360px;    
 }
 
-#btn{
-    width: 100%;
-    display: flex;    
-    margin: 0 auto;
-    text-align: center;
-}
-#fot{
-    text-align: center;
-    width: 100%;
-    float: left;
-    margin: 0 auto;
-}
-   
 
 #cabecera{
     width: 100%;
@@ -123,60 +110,67 @@ main{
       
 }
 
-.container{
-    width: 100%;
-    height: auto;
-    box-sizing: border-box;
-    float: left;
-}
-
-.carousel-inner{
-    text-align: center;
-    float:left;
-    width: 50%;
-    padding:20px;
-    margin: 1%;
-    border:1px solid silver;
-    box-sizing: border-box;    
-    overflow: hidden;
-}
-
-.item active{
-    
-    float:left;
-    width: 20%;
-    height: auto;
-    padding:20px;
-    margin: 1%;
-    border:1px solid silver;
-    box-sizing: border-box;    
-    overflow: hidden;    
-}
-
-#img{
-    width: 50%;
-    height: auto;
-}
-
-.imgp{
-    width: 200px;
-}
 
 #menu,main,footer,#cabecera{
     width: 100%;
     float: left;
     text-align: center;
+    margin: 0 auto;
 }
 
 #texto{
     text-align: center;
-    width: 100%;
-    height: auto;
+    width: 100%;    
     float: left;
     color: lightcyan;  
 }
 #redes{
     font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
+#face:hover{
+    background-color: rgb(76, 58, 240);
+    transition: 0,5s;
+    
+}
+#instagram:hover{
+    background-color: rgb(143, 10, 121);
+    transition: 0,5 s;
+    
+}
+#whatsap:hover{
+    background-color: rgb(14, 243, 83);
+    transition: 0,5 s;
+}
+#face{
+    border-radius: 15px solid;
+}
+#instagram{
+    border-radius: 15px solid;   
+}
+#whatsap{
+    border-radius: 15px solid;   
+}
+
+#slider{
+    width: 30%;
+    margin: 0 auto;
+    
+    
+}
+
+#btn{
+    width: 100%;
+    display: flex;
+    float: left;
+    margin: 0 auto;
+    
+}
+#fot{
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
 }
 
 @media (max-width: 400px) {
@@ -236,6 +230,18 @@ main{
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: darkgrey;
+    }
+
+    #slider{
+        width: 50%;
+        margin: 0 auto;        
+    }
+    #texto{
+        font-size: 15px;
+    }
+
+    #footer{
+        font-size: 10px;
     }
     
 }

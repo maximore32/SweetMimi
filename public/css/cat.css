@@ -137,6 +137,30 @@ main{
     color: lightcyan;  
 }
 
+#face:hover{
+    background-color: rgb(76, 58, 240);
+    transition: 0,5s;
+    
+}
+#instagram:hover{
+    background-color: rgb(143, 10, 121);
+    transition: 0,5 s;
+    
+}
+#whatsap:hover{
+    background-color: rgb(14, 243, 83);
+    transition: 0,5 s;
+}
+#face{
+    border-radius: 15px solid;   
+}
+#instagram{
+    border-radius: 15px solid;   
+}
+#whatsap{
+    border-radius: 15px solid;   
+}
+
 @media (max-width: 400px) {
     
     
