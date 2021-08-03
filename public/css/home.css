@@ -1,4 +1,4 @@
-body{
+#body{
     margin: 0;
     padding: 0;
     background-color: lightgrey;
@@ -29,6 +29,10 @@ body{
 }
 #menu :hover{
     color: blueviolet;
+}
+
+#menu{
+    height: 35px;
 }
 #menu ul{
     background-color: lightcoral; 
@@ -155,7 +159,7 @@ main{
 #slider{
     width: 30%;
     margin: 0 auto;
-    
+    margin-bottom: 10px;    
     
 }
 
