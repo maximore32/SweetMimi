@@ -1,4 +1,4 @@
-body{
+#body{
     margin: 0;
     padding: 0;
     background-color: lightgrey;
@@ -13,7 +13,6 @@ body{
     min-width: 360px;    
 }
 
-   
 
 #cabecera{
     width: 100%;
@@ -32,6 +31,9 @@ body{
     color: blueviolet;
 }
 
+#menu{
+    height: 35px;
+}
 #menu ul{
     background-color: lightcoral; 
     display: flex;
@@ -58,6 +60,18 @@ ul li a{
     
 
 
+}
+
+#producto{
+    text-align: center;
+    float:left;
+    width: 100%;
+    padding:20px;        
+    box-sizing: border-box;    
+    overflow: hidden;
+}
+.imgp{
+    width: 300px;
 }
 
 #cabecera img{
@@ -93,51 +107,43 @@ ul li a{
 
     
 
-footer{
+#footer{
     margin: 0 auto;
     font-size: 20px;
     float: left;
     text-align: center;    
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
+    font-family: Georgia, 'Times New Roman', Times, serif;    
     
 }
 
 main{
    margin: 0 auto;   
-   width: 100%;   
+   width: 100%;
+   float: left;
    color:white;   
    text-align: center;
    background-color: lightpink;
       
 }
 
-#producto{
-    text-align: center;
-    float:left;
-    width: 100%;
-    padding:20px;
-    margin: 1%;
-    border:1px solid silver;
-    box-sizing: border-box;    
-    overflow: hidden;
-}
-.imgp{
-    width: 200px;
-}
-#menu,main,#footer,#cabecera{
+
+#menu,main,footer,#cabecera{
     width: 100%;
     float: left;
     text-align: center;
+    margin: 0 auto;
 }
 
 #texto{
     text-align: center;
-    width: 98%;
+    width: 100%;    
     float: left;
     color: lightcyan;  
 }
-
+#redes{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 15px;
+}
 #face:hover{
     background-color: rgb(76, 58, 240);
     transition: 0,5s;
@@ -153,13 +159,29 @@ main{
     transition: 0,5 s;
 }
 #face{
-    border-radius: 15px solid;   
+    border-radius: 15px solid;
 }
 #instagram{
     border-radius: 15px solid;   
 }
 #whatsap{
     border-radius: 15px solid;   
+}
+
+
+
+#btn{
+    width: 100%;
+    display: flex;
+    float: left;
+    margin: 0 auto;
+    
+}
+#fot{
+    text-align: center;
+    width: 100%;
+    float: left;
+    margin: 0 auto;
 }
 
 @media (max-width: 400px) {
@@ -177,6 +199,10 @@ main{
     main,menu,footer{
         width: 100%;
         float: left;     
+    }
+
+    #menu{
+        height: 20px;
     }
 
     
