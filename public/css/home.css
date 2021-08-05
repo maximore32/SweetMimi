@@ -4,6 +4,7 @@
     background-color: lightgrey;
     
     
+    
 
 }
 #contenedor{
@@ -97,7 +98,7 @@ ul li a{
 
 #footer{
     margin: 0 auto;
-    font-size: 20px;
+    font-size: 12px;
     float: left;
     text-align: center;    
     font-family: Georgia, 'Times New Roman', Times, serif;    
@@ -136,24 +137,34 @@ main{
     background-color: rgb(76, 58, 240);
     transition: 0,5s;
     
+    
+        
 }
 #instagram:hover{
-    background-color: rgb(143, 10, 121);
+    background-color: rgb(168, 132, 162);
     transition: 0,5 s;
     
 }
 #whatsap:hover{
-    background-color: rgb(14, 243, 83);
+    background-color: rgb(7, 161, 54);
     transition: 0,5 s;
 }
-#face{
-    border-radius: 15px solid;
+#face>a>img{
+    border-radius: 100%;    
 }
-#instagram{
-    border-radius: 15px solid;   
+
+#instagram>a>img{
+    border-radius: 100%;       
 }
-#whatsap{
-    border-radius: 15px solid;   
+#whatsap>a>img{
+    border-radius: 100%;    
+}
+
+#btn{
+    width: 100%;    
+    margin: 0 auto;
+    border-radius: 20px;
+    
 }
 
 #slider{
@@ -163,13 +174,7 @@ main{
     
 }
 
-#btn{
-    width: 100%;
-    display: flex;
-    float: left;
-    margin: 0 auto;
-    
-}
+
 #fot{
     text-align: center;
     width: 100%;
@@ -322,7 +327,7 @@ main{
     
 }
 
-@media (min-width: 414px) {
+@media (max-width: 570px) {
     
     
 
@@ -340,7 +345,7 @@ main{
     }
 
     ul li{
-        font-size: 5px;
+        font-size: 8px;
     }
 
     ul li a{
@@ -385,6 +390,10 @@ main{
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
         color: darkgrey;
+    }
+
+    #footer{
+        height: auto;
     }
 
     
