@@ -262,6 +262,38 @@ main{
     #footer{
         font-size: 10px;
     }
+
+    ul.nav-items{
+        height: 0;
+        overflow: hidden;
+    }
+
+    #menu:target .nav-items{
+        height: 15.8em;
+    }
+
+    .close{
+        display: none;
+    }
+    #menu:target .open{
+        display: none;
+    }
+    #menu:target .close{
+        display: block;
+    }
+
+    #menu:target .nav-items{
+        background: #f0f0f0 none repeat scroll 0 0;
+        height: 15.8em;
+        transition: height 0.4s ease-in-out 0s, background-color 0.9s ease 0s;
+    }
+
+    ul.nav-items{
+        clear: both;
+        height: 0;
+        overflow: hidden;
+        transition: height 0.4s ease-in-out 0s, background-color 2s ease 0s;
+    }
     
 }
 

@@ -1,5 +1,10 @@
 <nav id="menu">
-    <ul>
+    
+    <div class="control-menu">
+        <a href="#menu" class="open"><span>ABRIR MENU</span></a>
+        <a href="#" class="close"><span>CERRAR MENU</span></a>
+    </div>
+    <ul class="nav-items">
         {% for i in data[1] %}
             <li><a href="/categoria/{{ i.categoria }}">{{i.categoria}}</a></li>
         {% endfor %}           
