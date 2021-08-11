@@ -28,8 +28,24 @@ app.use(bodyParser.urlencoded({ extended: true }))
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
 
+const mobile = require('is-mobile');
+
+app.use("/mobile", express.static('mobile'));
+app.use("/desktop", express.static('desktop'));
+
 const MongoClient = require('mongodb').MongoClient;
 const MONGO_URL = process.env.SONIURL;
+
+app.get('/', function(req, res){
+  console.log(mobile(req))
+  if(mobile(req)){
+    res.render('../mobile/home.html');
+  }
+  else{		
+    res.render('../desktop/home.html');
+  }
+
+});
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
@@ -47,7 +63,7 @@ app.get('/', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('home.html',{data:data});      
+      res.render('desktop/home.html',{data:data});      
     }) 
   })
 });
