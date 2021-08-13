@@ -1,0 +1,132 @@
+.menu{
+    background-color: lightpink;
+    justify-content: space-between;
+    height: 75px;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid white;
+    box-shadow: 5px 0 10px black;
+}
+
+
+
+*, *:before, *:after{
+    margin: 0;
+    padding: 0;
+    outline: 0;
+    box-sizing: border-box;
+}
+
+.logo{
+    color: white;
+    font-size: 35px;
+    padding: 0 80px;
+    font-weight: bold;
+}
+
+.logo a{
+    text-decoration: none;
+    color: linen;
+    list-style: none;
+}
+.logo >a :hover{
+    color: linen;
+    background-color: maroon;
+}
+
+
+.menu-item{
+    display: flex;
+    list-style: none;
+    margin-right: 30px;
+}
+
+.menu-item li{
+    border-radius: 3px;
+    margin: 0 5px;
+}
+
+.menu-item li a{
+    padding: 7px 13px;
+    text-decoration: none;
+    font-size: 25 px;
+    display: block;
+    text-transform: uppercase;
+    color: whitesmoke;
+}
+
+.menu-item li:hover, li.active{
+    background-color: black;
+    transition: -4s;
+}
+
+.btn{
+    margin-right: 20px;
+    font-size: 25px;
+    color: blanchedalmond;
+    cursor: pointer;
+    display: none;
+}
+
+ul.show{
+    top: 65px;
+}
+
+@media(max-width: 952px){
+    .logo{
+        font-size: 30px;
+        padding-left:35px;
+    }
+
+    .menu-item li a{
+        font-size: 16px;
+    }
+}
+
+@media(max-width: 858px){
+    .menu{
+        height: 65px;
+    }
+    .btn{
+        display: inline-flex;
+    }
+
+    .menu-item{
+        position: fixed;
+        width: 100vw;
+        height: calc(100% - 65px);
+        background: #414141;
+        top: -100vh;
+        text-align: center;
+        transition: all .4s;
+        flex-direction: column;
+    }
+
+    .menu-item li{
+        margin: 30px 0 0 0;
+        line-height: 30px;
+    }
+
+    .menu-item li a{
+        font-size: 20px;
+        color: blanchedalmond;
+        font-weight: bold;
+    }
+
+    .logo{
+        font-size: 25px;
+        padding-left: 35px;
+    }
+}
+
+@media(max-width: 858px) and (orientation: lanscape){
+    .menu-item li{
+        margin: 5px 0 0 0;
+    }
+    .menu-item{
+        overflow: scroll;
+        height:calc(100% - 65px);
+    }
+
+}

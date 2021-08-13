@@ -2,13 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{plato}}</title>
-    <link rel="stylesheet" href="../css/prod.css">
+    <link rel="stylesheet" href="../css/search.css">
+    <link rel="stylesheet" href="../css/menu.css">
+    <script src="../js/app.js" defer></script>
     <!-- CSS only -->
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
 <!-- JavaScript Bundle with Popper -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>   
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    <title>{{termino}}</title>
+    
 </head>
 <body id="body">
     <div id="contenedor">
@@ -19,17 +23,25 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sit consequuntur nulla dolor architecto. Ut consectetur deleniti laudantium molestiae quaerat. Reprehenderit rerum impedit ab eveniet itaque at sequi porro deserunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam praesentium, iusto at eligendi fuga illo voluptatibus dolore natus. Eum, delectus quia molestiae fugit deserunt quo sint, illo, cumque tempore harum quis quasi ex neque voluptate nobis? Eos distinctio quae omnis asperiores, commodi perspiciatis delectus provident dicta officia et dolore eligendi.
                 </p>
             </div>           
-            <div id="producto">
-                    <h1>{{id}}-{{plato}}</h1>                           
-                    <img class="imgp" src="data:image/jpeg;base64,{{img}}" alt="mimo">                    
-                    <h2>{{precio}}</h2>                    
-                    <p>{{descripcion}}</p>            
-                           
-            </div>
+            
+                {% if termino.length > 0 %}
+                <h1>Resultados de búsqueda para: <strong>{{termino}}</strong></h1>
+                <div id="producto">
+                    {% for i in dat %}                                
+                        <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
+                        <h1>{{i.id}}-{{i.Nombre}}</h1>
+                        <h2><a href="/plato/{{ i.id }}">{{i.Precio}}</a></h2>                    
+                        <p>{{i.Descripción}}</p>            
+                    {% endfor %}             
+                </div>
+                {% endif %}           
+            
             
         </main>
         {% include "footer.html" %}
          
     </div>
+    
 </body>
 </html>
+
