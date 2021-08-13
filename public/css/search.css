@@ -219,14 +219,18 @@ main{
         text-align: center;
         
     }
-    .f1>input{        
-        margin-top: 20px;    
-        border-radius: 10px;
+    .f1{
         width: 100%;
+        font-size: 1px;
+    }
+    .f1>input{
+        font-size: 12px;
+        margin: 3px;
+        width: 60%;
     }
     #f2{
-        width: 100%;
-        
+        font-size: 12px;
+        width: 30px;
     }
 
     #imagen{
@@ -275,16 +279,7 @@ main{
         margin: 0 auto;
         text-align: center;
     }
-    .f1>input{
-        font-size: 10px;
-        margin-top: 20px;    
-        border-radius: 10px;
-        width: 120px;
-    }
-    #f2{
-        font-size: 10px;
-        width: 60px;
-    }
+
 
     #imagen{
         width: 100%;
