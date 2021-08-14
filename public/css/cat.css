@@ -70,8 +70,14 @@ ul li a{
     box-sizing: border-box;    
     overflow: hidden;
 }
+
+#producto> h2 a{
+    text-decoration: none;
+    list-style: none;
+    color: white;
+}
 .imgp{
-    width: 300px;
+    width: 20%;
 }
 
 #cabecera img{
@@ -209,7 +215,7 @@ main{
         font-size: 13px;
     }
     .imgp{
-        width: 70%;
+        width: 40%;
     }
     #producto{
         width: 100%;
@@ -270,12 +276,13 @@ main{
         font-size: 13px;
     }
     .imgp{
-        width: 130px;
+        width: 65%;
     }
     #producto{
         width: 100%;
         margin: 0 auto;
         text-align: center;
+        
     }
 
 

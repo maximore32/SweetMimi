@@ -7,6 +7,7 @@
     align-items: center;
     border-bottom: 1px solid white;
     box-shadow: 5px 0 10px black;
+    
 }
 
 
@@ -18,19 +19,22 @@
     box-sizing: border-box;
 }
 
-.logo{
+#logo{
     color: white;
     font-size: 35px;
     padding: 0 80px;
     font-weight: bold;
+    font-family: 'Dancing Script', cursiva;
 }
 
-.logo a{
+#logo a{
     text-decoration: none;
     color: linen;
     list-style: none;
+    font-family: 'Dancing Script', cursiva;
+    
 }
-.logo >a :hover{
+#logo >a :hover{
     color: linen;
 
 }
@@ -61,7 +65,7 @@
     transition: -4s;
 }
 
-.btn{
+#bton{
     margin-right: 20px;
     font-size: 25px;
     color: blanchedalmond;
@@ -72,9 +76,12 @@
 ul.show{
     top: 65px;
 }
+div.none{
+    display: none;
+}
 
 @media(max-width: 952px){
-    .logo{
+    #logo{
         font-size: 30px;
         padding-left:35px;
     }
@@ -87,8 +94,10 @@ ul.show{
 @media(max-width: 858px){
     .menu{
         height: 65px;
+        border: 1px solid blanchedalmond;
+        
     }
-    .btn{
+    #bton{
         display: inline-flex;
     }
 
@@ -101,23 +110,29 @@ ul.show{
         text-align: center;
         transition: all .4s;
         flex-direction: column;
+        padding-left: 0;
+                
+        
     }
 
     .menu-item li{
         margin: 30px 0 0 0;
         line-height: 30px;
+        
     }
 
     .menu-item li a{
         font-size: 20px;
         color: blanchedalmond;
         font-weight: bold;
+        
     }
 
-    .logo{
+    #logo{
         font-size: 25px;
         padding-left: 35px;
     }
+    
 }
 
 @media(max-width: 858px) and (orientation: lanscape){
