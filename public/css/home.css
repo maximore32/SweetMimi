@@ -164,6 +164,10 @@ main,footer{
 
 @media (max-width: 400px) {
     
+    #s:focus {
+        width: 10px;
+        opacity: 1;       
+   }
     
 
     #cabecera{
@@ -264,6 +268,7 @@ main,footer{
     .f1{
         width: 100%;
         font-size: 1px;
+        
     }
     .f1>input{
         font-size: 12px;
@@ -273,6 +278,7 @@ main,footer{
     #f2{
         font-size: 12px;
         width: 30px;
+        
     }
 
     
@@ -280,7 +286,10 @@ main,footer{
 
 @media (max-width: 680px) {
     
-    
+    #s:focus {
+        width: 10px;
+        opacity: 1;       
+   }
 
     #cabecera{
         width: 100%;

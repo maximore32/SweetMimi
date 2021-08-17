@@ -52,7 +52,8 @@ app.get('/', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('home.html',{data:data});      
+      res.render('home.html',{data:data});
+      db.close()
     }) 
   })
 });
@@ -90,6 +91,7 @@ app.get('/plato/:id', (req, res)=>{
 
       }    		
     });
+    db.close()
      })
 });	
 });
@@ -116,6 +118,7 @@ app.get('/categoria/:cat', (req, res)=>{
     dbo.collection("dulce").find({"Categoria":req.params.cat}).toArray()
     .then((dato) => {      
     res.render('categoria.html',{data:data,dato:dato,categoria:req.params.cat});
+    db.close()
     
     })
     })
@@ -278,9 +281,12 @@ app.get('/Resultado', (req, res)=>{
         const dbo = db.db("testsoni");    
         dbo.collection("dulce").find({"Nombre":{$regex: expresiontermino }}).toArray(function(err, dat) {	      
           res.render('resultado.html',{termino:termino,dat:dat,data:data});
+          db.close()       
+          
         });
       })
-});	
+            
+});
 });
 
 app.listen(port);

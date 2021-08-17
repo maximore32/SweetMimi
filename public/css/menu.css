@@ -10,6 +10,10 @@
     
 }
 
+.f3{
+    display: none;
+}
+
 
 
 *, *:before, *:after{
@@ -22,7 +26,7 @@
 #logo{
     color: white;
     font-size: 35px;
-    padding: 0 80px;
+    padding: 0 40px;
     font-weight: bold;
     font-family: 'Dancing Script', cursiva;
 }
@@ -80,6 +84,12 @@ div.none{
     display: none;
 }
 
+form.look{
+    display: block;
+    height: 36px;
+    background-color: black;
+}
+
 @media(max-width: 952px){
     #logo{
         font-size: 30px;
@@ -89,6 +99,9 @@ div.none{
     .menu-item li a{
         font-size: 16px;
     }
+
+
+
 }
 
 @media(max-width: 858px){
@@ -131,6 +144,14 @@ div.none{
     #logo{
         font-size: 25px;
         padding-left: 35px;
+    }
+
+    .f3{
+        display: block;
+    }
+
+    #f4{
+        display: none;
     }
     
 }
