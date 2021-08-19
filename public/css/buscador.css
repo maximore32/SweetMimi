@@ -1,0 +1,48 @@
+.buscador{
+    border:1px solid lightpink;
+    display: inline;
+    border-radius:10px;
+    padding:5px;
+    width: 100%;
+}
+
+#formu{
+    margin: 0 auto;
+    text-align: center;
+    margin: 10px;
+    
+}
+
+.f5{
+    width: 50%;
+}
+
+
+/*
+    Oculta la apariencia del input search
+*/
+input[type=search], input[type=search]:focus{
+-webkit-appearance: none;
+appearance: none;
+border:0;
+outline: 0;
+}
+input[type=search]:focus{
+    color:midnightblue;
+    font-weight: bold;
+}
+input[type="submit"]{
+    width:24px;
+    height: 24px;
+    background-image: url("../img/lupa.png");
+    background-size: cover;
+    border:0;
+    background-color:transparent;
+}
+input{
+    vertical-align: middle;
+}
+
+input> img{
+    color: lightpink;
+}

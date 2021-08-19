@@ -1,7 +1,7 @@
 #body{
     margin: 0;
     padding: 0;
-    background-color: lightgrey;
+    background-color: white;
     
     
 
@@ -117,7 +117,8 @@ ul li a{
     font-size: 12px;
     float: left;
     text-align: center;    
-    font-family: Georgia, 'Times New Roman', Times, serif;    
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: lightgrey;    
     
 }
 
@@ -128,6 +129,7 @@ main{
    color:white;   
    text-align: center;
    background-color: lightpink;
+   box-shadow: 5px 0 10px lightpink;
       
 }
 

@@ -17,6 +17,7 @@
     "express-session": "^1.17.2",
     "image-to-base64": "^2.2.0",
     "is-mobile": "^3.0.0",
+    "mdb-ui-kit": "^3.9.0",
     "mongodb": "^3.6.3",
     "nodemon": "^2.0.12",
     "nunjucks": "^3.2.2"

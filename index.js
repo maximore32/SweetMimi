@@ -91,7 +91,7 @@ app.get('/plato/:id', (req, res)=>{
 
       }    		
     });
-    db.close()
+    
      })
 });	
 });

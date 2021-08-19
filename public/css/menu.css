@@ -6,7 +6,7 @@
     display: flex;
     align-items: center;
     border-bottom: 1px solid white;
-    box-shadow: 5px 0 10px black;
+    box-shadow: 5px 0 10px lightpink;
     
 }
 
@@ -84,11 +84,7 @@ div.none{
     display: none;
 }
 
-form.look{
-    display: block;
-    height: 36px;
-    background-color: black;
-}
+
 
 @media(max-width: 952px){
     #logo{
@@ -146,13 +142,13 @@ form.look{
         padding-left: 35px;
     }
 
-    .f3{
-        display: block;
+    #f3{
+        width: 80%;
     }
 
-    #f4{
-        display: none;
-    }
+    
+
+
     
 }
 
