@@ -145,7 +145,9 @@ main{
     text-align: center;
     width: 100%;    
     float: left;
-    color: lightcyan;  
+    color: lightcyan;
+    font-family: 'Lobster', cursive;
+    font-size: 17px;
 }
 #redes{
     font-family: Georgia, 'Times New Roman', Times, serif;

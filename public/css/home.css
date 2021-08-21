@@ -102,7 +102,10 @@ main,footer{
     text-align: center;
     width: 100%;    
     float: left;
-    color: lightcyan;  
+    color: lightcyan;
+    font-family: 'Lobster', cursive;
+    font-size: 17px;
+    margin-top: 10px;
 }
 #redes{
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -403,7 +406,9 @@ main,footer{
         height: auto;
     }
 
-    
+    #slider{
+        width: 65%;
+    }
 
     
     
