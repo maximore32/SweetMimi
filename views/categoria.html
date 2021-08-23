@@ -26,11 +26,12 @@
                 <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione sit consequuntur nulla dolor architecto. Ut consectetur deleniti laudantium molestiae quaerat. Reprehenderit rerum impedit ab eveniet itaque at sequi porro deserunt?Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam praesentium, iusto at eligendi fuga illo voluptatibus dolore natus. Eum, delectus quia molestiae fugit deserunt quo sint, illo, cumque tempore harum quis quasi ex neque voluptate nobis? Eos distinctio quae omnis asperiores, commodi perspiciatis delectus provident dicta officia et dolore eligendi.
                 </p>
             </div>           
-            <div id="producto">
-                {% for i in dato%}                                   
+            <div id="box">
+                {% for i in dato%}
+                <div id="producto">                                   
                     <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
                     <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
-                                                
+                </div>                                
                 {% endfor %}             
             </div>
             

@@ -146,6 +146,25 @@ div.none{
         width: 80%;
     }
 
+    .border{
+        padding: 16px;
+    }
+
+    #producto{
+        width: 45%;
+        padding: 10px;
+        margin: 9px;
+    }
+
+    .imgp{
+        width: 130px;
+    }
+
+    #producto> h2 a{
+        font-size: 8px;
+    }
+
+
     
 
 

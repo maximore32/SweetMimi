@@ -30,12 +30,13 @@
             
                 {% if termino.length > 0 %}
                 <h1>Resultados de búsqueda para: <strong>{{termino}}</strong></h1>
-                <div id="producto">
-                    {% for i in dat %}                                
+                <div id="box">
+                    {% for i in dat %}
+                    <div id="producto">                              
                         <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
-                        <h1><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h1>
-                        <p>{{i.Descripción}}</p>                                       
-                                  
+                        <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
+                                                             
+                    </div>  
                     {% endfor %}             
                 </div>
                 {% endif %}           

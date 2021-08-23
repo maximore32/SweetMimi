@@ -62,7 +62,7 @@ ul li a{
 
 }
 
-#producto{
+#productos{
     text-align: center;
     float:left;
     width: 100%;
@@ -70,7 +70,7 @@ ul li a{
     box-sizing: border-box;    
     overflow: hidden;
 }
-.imgp{
+.imgpt{
     width: 300px;
 }
 

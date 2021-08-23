@@ -68,6 +68,14 @@
                 </button>
               </div>      
             </div>
+            <div id="box">
+            {% for i in data[0] %}
+            <div id="producto">                                   
+              <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
+              <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
+            </div>
+            {% endfor %}
+           </div>
                         
             
         </main>
