@@ -138,6 +138,11 @@ main,footer{
     background-color: rgb(7, 161, 54);
     transition: 0,5 s;
 }
+#gmail:hover{
+    background-color: rgb(159, 170, 162);
+    transition: 0,5 s;
+}
+
 #face>a>img{
     border-radius: 100%;    
 }
@@ -146,6 +151,10 @@ main,footer{
     border-radius: 100%;       
 }
 #whatsap>a>img{
+    border-radius: 100%;    
+}
+
+#gmail>a>img{
     border-radius: 100%;    
 }
 
@@ -164,10 +173,9 @@ main,footer{
 }
 
 
-#fot{
+.fot{
     text-align: center;
-    width: 100%;
-    float: left;
+    width: 100%;    
     margin: 0 auto;
 }
 

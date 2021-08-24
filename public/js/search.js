@@ -1,12 +1,11 @@
-addEventListener('DOMContentLoaded', ()=>{
-    const search = document.querySelector(".f3")
-    if (search){
-        btn.addEventListener('click' ,()=>{
-            const search_item = document.querySelector('#f4')
-            search_item.classList.toggle('look')
-        })
+fetch('https://github.com/maximore32/SweetMimi')
+  .then(response => response.json())
+  .then(json => {
+      // traemos los primeros 10 comentarios      
+      for(i=0;i<=6;i++){
+        document.getElementById('producto').render('home.html', 
+         
+        
+        );
     }
-    else{
-        console.log("ERROR")
-    }
-})
+  })

@@ -55,6 +55,10 @@
     margin: 0 5px;
 }
 
+.menu-item>img{
+    display: none;
+}
+
 .menu-item li a{
     padding: 7px 13px;
     text-decoration: none;
@@ -83,6 +87,11 @@ ul.show{
 div.none{
     display: none;
 }
+
+#menu-item2{
+    display: none;
+}
+
 
 
 
@@ -162,6 +171,20 @@ div.none{
 
     #producto> h2 a{
         font-size: 8px;
+    }
+
+    #menu-item2>img{
+        display: block;
+        border-radius: 100%;        
+        margin: 0 auto;        
+        text-align: center;
+    }
+
+    #menu-item2{
+        margin-top: 50px;
+        display: block;
+        border-radius: 100%;               
+        text-align: center;
     }
 
 
