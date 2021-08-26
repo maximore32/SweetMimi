@@ -92,6 +92,34 @@ div.none{
     display: none;
 }
 
+#producto{
+    height: 350px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+#All{
+    margin: auto;
+    text-align: center;
+}
+#All h3 a{
+    font-size: 20px;
+    font-family: 'Dancing Script', cursive;
+    color: blanchedalmond;
+
+}
+
+#imgbox{
+    
+    width: 100%;
+
+}
+
+#producto> h2 a{
+    text-decoration: none;
+    list-style: none;
+    color:lightpink;
+}
 
 
 
@@ -163,10 +191,11 @@ div.none{
         width: 45%;
         padding: 10px;
         margin: 9px;
+        height: 230px;
     }
 
     .imgp{
-        width: 130px;
+        width: 140px;
     }
 
     #producto> h2 a{

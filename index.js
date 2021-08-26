@@ -33,7 +33,7 @@ const mobile = require('is-mobile');
 
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL;
+const MONGO_URL = process.env.SONIURL ;
 
 
 app.get('/', (req, res)=>{	  
@@ -59,6 +59,28 @@ app.get('/', (req, res)=>{
 });
 });
 
+app.get('/Productos', (req, res)=>{	  
+  MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
+  const dbo = db.db("testsoni"); 
+  const data = [];   
+  // Consultamos los platos
+  dbo.collection("dulce").find().toArray()
+  .then((dataplatos) => { 
+// en data[0] quedan los platos
+    data.push(dataplatos)
+  }) 
+  .then(() => {
+  //Consultamos en la base las categorías
+    dbo.collection("categorias").find().toArray()
+    .then((datacategorias) => { 
+// en data[1] quedan los categorias
+      data.push(datacategorias)      
+      res.render('all.html',{data:data});
+      db.close()
+    }) 
+  })
+});
+});
 
 // Ruta individual del plato
 app.get('/plato/:id', (req, res)=>{	  

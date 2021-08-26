@@ -65,10 +65,12 @@ ul li a{
 #producto{
     text-align: center;
     float:left;
-    width: 100%;
-    padding:20px;        
+    width: 33%;
+    padding:20px;
+    margin: 2px;            
     box-sizing: border-box;    
     overflow: hidden;
+    border: 1px solid whitesmoke;
 }
 
 #producto> h1 a{
@@ -81,7 +83,7 @@ ul li a{
 }
 
 .imgp{
-    width: 20%;
+    width: 50%;
 }
 
 #cabecera img{
@@ -150,7 +152,7 @@ main{
     width: 100%;    
     float: left;
     color: lightcyan;
-    font-family: 'Lobster', cursive;
+    font-family: 'Dancing Script', cursive;
     font-size: 17px;
 }
 #redes{
