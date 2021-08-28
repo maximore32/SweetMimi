@@ -129,7 +129,7 @@ main{
 
 
 #menu,main,footer,#cabecera{
-    width: 100%;
+    width: 100vw;
     float: left;
     text-align: center;
     margin: 0 auto;
@@ -310,4 +310,30 @@ main{
 
     
     
+}
+
+@media (max-width: 858px){
+    #productos{
+        width: 90%;
+        background-color: white;
+        border-radius: 10px;
+        margin: 16px;
+        padding: 10px;
+    }
+
+    .imgpt{
+        width: 275px;
+    }
+    #productos > h1, h2, p{
+        color: lightpink;
+    }
+    #texto>p{
+        color: white;
+    }
+    #redes{
+        color: black;
+    }
+    #sms{
+        color: black;
+    }
 }

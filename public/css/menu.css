@@ -121,6 +121,13 @@ div.none{
     color:lightpink;
 }
 
+#footer{
+    background-color: beige;
+    border-top: 1px solid rgb(68, 67, 67);
+}
+.fot p{
+    margin-top: 10px;
+}
 
 
 @media(max-width: 952px){
@@ -199,7 +206,7 @@ div.none{
     }
 
     #producto> h2 a{
-        font-size: 8px;
+        font-size: 12px;
     }
 
     #menu-item2>img{
@@ -214,6 +221,28 @@ div.none{
         display: block;
         border-radius: 100%;               
         text-align: center;
+    }
+
+    #btn a{
+        font-size: 22px;
+        margin: 5px;
+        color: deeppink;
+    }
+
+    .fot a{
+        font-size: 22px;
+        margin: 5px;
+        color: deeppink;
+    }
+
+    #btn a :hover{
+        font-size: 30px;
+        color: deeppink;
+    }
+
+    .fot a :hover{
+        font-size: 30px;
+        color: deeppink;
     }
 
 

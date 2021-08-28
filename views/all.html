@@ -41,9 +41,9 @@
             {% for i in data[0] %}
             
                      
-            <div id="producto">                                   
-              <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
+            <div id="producto">             
               <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
+              <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
             </div>
             
             {% endfor %}
