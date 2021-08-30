@@ -122,8 +122,8 @@ div.none{
 }
 
 #footer{
-    background-color: beige;
-    border-top: 1px solid rgb(68, 67, 67);
+    background-color:ghostwhite;
+    border-top: 1px solid rgb(110, 109, 109);
 }
 .fot p{
     margin-top: 10px;
@@ -217,7 +217,7 @@ div.none{
     }
 
     #menu-item2{
-        margin-top: 50px;
+        margin-top: 35px;
         display: block;
         border-radius: 100%;               
         text-align: center;
@@ -225,32 +225,32 @@ div.none{
 
     #btn a{
         font-size: 22px;
-        margin: 5px;
-        color: deeppink;
-    }
-
-    .fot a{
-        font-size: 22px;
-        margin: 5px;
+        margin: 10px;
         color: deeppink;
     }
 
     #btn a :hover{
-        font-size: 30px;
+        font-size: 32px;
         color: deeppink;
     }
-
-    .fot a :hover{
-        font-size: 30px;
-        color: deeppink;
-    }
-
-
     
 
 
     
 }
+
+
+
+@media(max-width: 568px){
+    .menu-item{
+        width: 100%;
+    }
+    .menu{
+        width: 100%;
+    }
+}
+
+
 
 @media(max-width: 858px) and (orientation: lanscape){
     .menu-item li{
