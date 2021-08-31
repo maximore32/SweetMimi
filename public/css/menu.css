@@ -234,6 +234,30 @@ div.none{
         color: deeppink;
     }
     
+    #nav-foot ul{        
+        justify-content: space-between;
+        list-style: none;
+        margin: 1px;
+        padding: 1px;
+        text-align: center;
+    }
+    #nav-foot{
+        margin-top: 11px;
+    }
+
+    #nav-foot ul li{
+        text-align: center;
+    }
+    #nav-foot ul a{
+        font-size: 7px;
+        text-decoration: none;
+        color:darkslateblue;
+    }
+
+    #nav-foot ul a :hover{
+        color: deeppink;
+    }
+
 
 
     

@@ -53,7 +53,7 @@
                 <div class="carousel-inner">
                   {% for i in data[0] %}
   
-                  {% if i.id==1 %}
+                  {% if i.id==10 %}
                 <div class="carousel-item active">
                   <img class="d-block w-100" src="data:image/jpeg;base64,{{i.Imagen}}" alt="Sweet-mimi">
                 </div>
@@ -80,8 +80,8 @@
             {% for i in data[0] %}
             {% if i.id<=6 %}
                      
-            <div id="producto">             
-              <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
+            <div id="producto">
+              <a href="/plato/{{ i.id }}"><img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo"></a>              
               <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
             </div>
             {% endif %}

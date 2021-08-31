@@ -38,7 +38,7 @@
                 <div id="box">
                     {% for i in dat %}
                     <div id="producto">                              
-                        <img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo">
+                        <a href="/plato/{{ i.id }}"><img class="imgp" src="data:image/jpeg;base64,{{i.Imagen}}" alt="mimo"></a>
                         <h2><a href="/plato/{{ i.id }}">{{i.Nombre}}</a></h2>
                                                              
                     </div>  
