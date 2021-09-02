@@ -1,7 +1,7 @@
 #body{
     margin: 0;
     padding: 0;
-    background-color: white;
+    
 }
 
 #producto{
@@ -53,30 +53,7 @@ ul li a{
 
 
 
-.f1{
-    
-    margin: 5px;
-    text-align: center;            
-    width: 100%;            
-    padding: 1px;
-    justify-content: center;
-    
-}
 
-.f1>input{
-    font-size: 20px;
-    margin: 3px;
-    width: 60%;
-}
-#f2{
-    font-size: 20px;
-    width: 100px;
-}
-
-.f1>input:hover{
-    background-color: lightpink;
-    color:whitesmoke;
-}
 
     
 
@@ -113,7 +90,7 @@ main,footer{
     text-align: center;
     width: 100%;    
     float: left;
-    color: lightcyan;
+    color: white;
     font-family: 'Dancing Script', cursive;
     font-size: 20px;
     margin-top: 10px;
@@ -203,7 +180,7 @@ main,footer{
     font-size: 15px;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 480px) {
     
     #s:focus {
         width: 10px;

@@ -84,9 +84,14 @@
 ul.show{
     top: 65px;
 }
+
+ul.gone{
+    display: none;
+}
 div.none{
     display: none;
 }
+
 
 #menu-item2{
     display: none;
@@ -98,14 +103,31 @@ div.none{
     background-color: white;
 }
 
+#box,h1{
+    font-family: "Pacifico", cursive;
+}
+
+#productos h1{
+    font-family: "Pacifico", cursive;
+}
+
+#productos h2{
+    font-family: 'Dancing Script', cursive;
+}
+
+#productos p{
+    font-family: fansong;
+}
+
 #All{
     margin: auto;
     text-align: center;
 }
 #All h3 a{
-    font-size: 20px;
+    font-size: 23px;
     font-family: 'Dancing Script', cursive;
     color: blanchedalmond;
+    text-decoration: none;
 
 }
 
@@ -127,6 +149,16 @@ div.none{
 }
 .fot p{
     margin-top: 10px;
+}
+
+
+#player{
+    background-color: white;
+    padding:10px;
+    border-radius: 10px;
+    width: 90%;
+    text-align: center;
+    margin: 20px;
 }
 
 
@@ -182,7 +214,7 @@ div.none{
     }
 
     #logo{
-        font-size: 35px;
+        font-size: 37px;
         padding-left: 25px;
     }
 
@@ -249,7 +281,7 @@ div.none{
         text-align: center;
     }
     #nav-foot ul a{
-        font-size: 7px;
+        font-size: 8px;
         text-decoration: none;
         color:darkslateblue;
     }
@@ -257,6 +289,42 @@ div.none{
     #nav-foot ul a :hover{
         color: deeppink;
     }
+
+    #All{
+        margin: 3px;
+        padding: 1px;
+    }
+    #All a {
+        font-size: 23px;
+    }
+
+    #media{
+        float: right;
+        text-align: center;
+        margin-right: 5px;
+    }
+
+    #media a{
+        text-decoration: none;
+        font-size: 10px;
+    }
+    
+    .fot{
+        float: left;
+    }
+
+    #video{
+        width: 100%;
+        box-sizing: border-box;
+        float: left;
+    }
+
+    #texto{
+        font-size: 20px;
+        text-align: center;
+        padding: 3px;
+    }
+
 
 
 
