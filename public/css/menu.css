@@ -10,6 +10,11 @@
     
 }
 
+nav, main, footer{
+    width: 100vw;
+}
+
+
 .f3{
     display: none;
 }
@@ -98,7 +103,7 @@ div.none{
 }
 
 #producto{
-    height: 350px;
+    
     border-radius: 10px;
     background-color: white;
 }
@@ -122,6 +127,8 @@ div.none{
 #All{
     margin: auto;
     text-align: center;
+    float: left;
+    width: 100%;
 }
 #All h3 a{
     font-size: 23px;
@@ -152,13 +159,24 @@ div.none{
 }
 
 
-#player{
+.player{
     background-color: white;
     padding:10px;
     border-radius: 10px;
-    width: 90%;
+    width: 30%;
     text-align: center;
     margin: 20px;
+    float: left;
+}
+
+#nav-foot{
+    display: none;
+}
+
+#video{
+    float: left;
+    width: 100%;
+    margin-left: 1%;
 }
 
 
@@ -195,8 +213,7 @@ div.none{
         text-align: center;
         transition: all .4s;
         flex-direction: column;
-        padding-left: 0;
-                
+        padding-left: 0;                
         
     }
 
@@ -249,7 +266,7 @@ div.none{
     }
 
     #menu-item2{
-        margin-top: 35px;
+        margin-top: 25px;
         display: block;
         border-radius: 100%;               
         text-align: center;
@@ -275,6 +292,7 @@ div.none{
     }
     #nav-foot{
         margin-top: 11px;
+        display: block;
     }
 
     #nav-foot ul li{
@@ -326,6 +344,17 @@ div.none{
     }
 
 
+    .player{
+        background-color: white;
+        padding:10px;
+        border-radius: 10px;
+        width: 90%;
+        text-align: center;
+        margin: 20px;
+        float: left;
+    }
+
+
 
 
     
@@ -339,6 +368,26 @@ div.none{
     }
     .menu{
         width: 100%;
+    }
+
+    nav,main,footer{
+        width: 100%;
+    }
+
+    .menu-item{
+        height: calc(100% - 80px);
+                
+    }
+}
+
+
+
+
+@media(max-width: 480px){
+    .menu-item li{
+        margin: 10px 0 0 0;
+        line-height: 30px;
+        
     }
 }
 

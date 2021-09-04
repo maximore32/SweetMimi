@@ -65,13 +65,24 @@ ul li a{
 #productos{
     text-align: center;
     float:left;
-    width: 100%;
+    width: 60%;
+    margin-left: 20%;
     padding:20px;        
     box-sizing: border-box;    
     overflow: hidden;
+    border: 9px double white;
+}
+
+#All{
+    width: 100%;
+    float: left;
+}
+
+#productos > h1{
+    margin-top: 10px;
 }
 .imgpt{
-    width: 300px;
+    width: 360px;
 }
 
 #cabecera img{
@@ -317,8 +328,9 @@ main{
         width: 90%;
         background-color: white;
         border-radius: 10px;
-        margin: 16px;
+        margin: 20px;
         padding: 10px;
+        margin-left: 5%;
     }
 
     .imgpt{
