@@ -165,7 +165,7 @@ div.none{
     border-radius: 10px;
     width: 30%;
     text-align: center;
-    margin: 20px;
+    margin: 22px;
     float: left;
 }
 
@@ -176,7 +176,7 @@ div.none{
 #video{
     float: left;
     width: 100%;
-    margin-left: 1%;
+    
 }
 
 
@@ -309,7 +309,7 @@ div.none{
     }
 
     #All{
-        margin: 3px;
+        
         padding: 1px;
     }
     #All a {
@@ -350,7 +350,7 @@ div.none{
         border-radius: 10px;
         width: 90%;
         text-align: center;
-        margin: 20px;
+        margin: 19px;
         float: left;
     }
 
@@ -375,7 +375,7 @@ div.none{
     }
 
     .menu-item{
-        height: calc(100% - 80px);
+        height: calc(100% - 70px);
                 
     }
 }
