@@ -452,4 +452,13 @@ main,footer{
         margin: 15px;
         margin-left: 5%;
     }
+
+    .w-100{
+        height: 300px;
+    }
+
+    #carouselExampleControls{
+        width: 100%;
+    }
 }
+

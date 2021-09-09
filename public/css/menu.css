@@ -213,7 +213,8 @@ div.none{
         text-align: center;
         transition: all .4s;
         flex-direction: column;
-        padding-left: 0;                
+        padding-left: 0;
+        overflow: scroll;          
         
     }
 
@@ -221,6 +222,11 @@ div.none{
         margin: 30px 0 0 0;
         line-height: 30px;
         
+    }
+
+    .menu-item li a:hover{
+        background-color: rgb(32, 32, 32);
+        color: blanchedalmond;
     }
 
     .menu-item li a{
@@ -232,7 +238,7 @@ div.none{
 
     #logo{
         font-size: 37px;
-        padding-left: 25px;
+        padding-left: 15px;
     }
 
     #f3{
@@ -375,7 +381,7 @@ div.none{
     }
 
     .menu-item{
-        height: calc(100% - 70px);
+        height: calc(100% - 65px);
                 
     }
 }
@@ -393,13 +399,32 @@ div.none{
 
 
 
-@media(max-width: 858px) and (orientation: lanscape){
-    .menu-item li{
+
+
+@media(max-width: 858px) and (orientation: landscape){
+    .menu-item li a{
         margin: 5px 0 0 0;
     }
     .menu-item{
         overflow: scroll;
         height:calc(100% - 65px);
     }
+    #producto{
+        width: 47%;
+    }
 
+    #slider{
+        width: 100%;
+    }
+
+    #texto{
+        font-size: 21px;
+    }
+
+}
+
+@media(max-width: 568px) and (orientation: landscape){
+    #producto{
+        width: 46%;
+    }
 }

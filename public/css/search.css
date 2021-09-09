@@ -6,6 +6,10 @@
     
 
 }
+
+h1{
+    color: #055160;
+}
 #contenedor{
     width: 100%;
     margin: 0 auto;
@@ -267,7 +271,8 @@ main{
     h1{
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: darkgrey;
+        color: #055160;
+    
     }
     
 }
@@ -317,7 +322,7 @@ main{
     h1{
         font-size: 20px;
         font-family: Verdana, Geneva, Tahoma, sans-serif;
-        color: darkgrey;
+        color: #055160
     }
 
     
