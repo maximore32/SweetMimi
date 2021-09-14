@@ -1,9 +1,9 @@
 {
   "name": "Sweet Mimi",
   "short_name": "Sweet Mimi",
-  "theme_color": "#FFB6C1",
+  "theme_color": "#FFFFFF",
   "background_color": "#FFB6C1",
-  "color": "white",
+  "color": "#FFFFFF",
   "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/",
