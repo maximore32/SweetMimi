@@ -3,6 +3,7 @@
   "short_name": "Sweet Mimi",
   "theme_color": "#FFB6C1",
   "background_color": "#FFB6C1",
+  "color": "white",
   "display": "fullscreen",
   "orientation": "portrait",
   "Scope": "/",
