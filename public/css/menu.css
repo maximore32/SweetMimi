@@ -179,6 +179,20 @@ div.none{
     
 }
 
+#btn a{
+    font-size: 25px;
+    margin: 10px;
+    color: deeppink;
+}
+
+#btn a:hover{
+    color: darkmagenta;
+}
+
+#media a:hover{
+    color: darkmagenta;
+    
+}
 
 @media(max-width: 952px){
     #logo{

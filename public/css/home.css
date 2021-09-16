@@ -60,7 +60,7 @@ ul li a{
 
 #footer{
     margin: 0 auto;
-    font-size: 12px;
+    
     float: left;
     text-align: center;    
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -100,41 +100,7 @@ main,footer{
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 15px;
 }
-#face:hover{
-    background-color: rgb(76, 58, 240);
-    transition: 0,5s;
-    
-    
-        
-}
-#instagram:hover{
-    background-color: rgb(168, 132, 162);
-    transition: 0,5 s;
-    
-}
-#whatsap:hover{
-    background-color: rgb(7, 161, 54);
-    transition: 0,5 s;
-}
-#gmail:hover{
-    background-color: rgb(159, 170, 162);
-    transition: 0,5 s;
-}
 
-#face>a>img{
-    border-radius: 100%;    
-}
-
-#instagram>a>img{
-    border-radius: 100%;       
-}
-#whatsap>a>img{
-    border-radius: 100%;    
-}
-
-#gmail>a>img{
-    border-radius: 100%;    
-}
 
 #btn{
     width: 100%;    
@@ -182,10 +148,10 @@ main,footer{
 }
 
 #player{
-    width: 50%;
+    width: 30%;
     padding: 10px;
     margin: 20px;
-    margin-left: 25%;
+    margin-left: 35%;
     background-color: white;
     float: left;
     height: 270px;

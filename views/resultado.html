@@ -38,7 +38,7 @@
                 </p>
             </div>            
             
-                {% if termino.length > 0 %}
+                {% if dat.length > 0 %}
                 <h1>Resultados de búsqueda para: <strong>{{termino}}</strong></h1>
                 <div id="box">
                     {% for i in dat %}
@@ -51,7 +51,7 @@
                 </div>
                 {% endif %}
 
-                {% if termino.length == 0 %}
+                {% if dat.length == 0 %}
                 <h1>No se encuentran resultados</h1>
                 {% endif %}
 
