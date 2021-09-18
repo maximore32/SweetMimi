@@ -52,7 +52,7 @@ app.get('/', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('home.html',{data:data});
+      res.render('home.html',{data:data,titulo:"SweetMimi"});
       db.close()
     }) 
   })
@@ -76,7 +76,7 @@ app.get('/Videos', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('video.html',{data:data});
+      res.render('video.html',{data:data,titulo:"SweetMimi"});
       db.close()
     }) 
   })
@@ -102,7 +102,7 @@ app.get('/Productos', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('all.html',{data:data});
+      res.render('all.html',{data:data,titulo:"SweetMimi"});
       db.close()
     }) 
   })
@@ -133,7 +133,7 @@ app.get('/plato/:id', (req, res)=>{
          // Buscamos en la base con un findeOne el plato
   dbo.collection("dulce").findOne({"id":id},function(err, dati) {   	
     if (dati){     
-          res.status(200).render('producto.html',{data:data,id:dati.id,plato:dati.Nombre,img:dati.Imagen,descripcion:dati.Descripción,categoria:dati.Categoria,precio:dati.Precio}
+          res.status(200).render('producto.html',{data:data,id:dati.id,plato:dati.Nombre,img:dati.Imagen,descripcion:dati.Descripción,categoria:dati.Categoria,precio:dati.Precio,titulo:"SweetMimi"}
           );	
       }else{
           res.status(404).send(`<p>ERROR</p>`)
@@ -166,7 +166,7 @@ app.get('/categoria/:cat', (req, res)=>{
       // Buscamos en platos y filtramos por su categoría para mostrarlos
     dbo.collection("dulce").find({"Categoria":req.params.cat}).toArray()
     .then((dato) => {      
-    res.render('categoria.html',{data:data,dato:dato,categoria:req.params.cat});
+    res.render('categoria.html',{data:data,dato:dato,categoria:req.params.cat,titulo:"SweetMimi"});
     db.close()
     
     })
@@ -329,7 +329,7 @@ app.get('/Resultado', (req, res)=>{
       .then(()=>{
         const dbo = db.db("testsoni");    
         dbo.collection("dulce").find({"Nombre":{$regex: expresiontermino }}).toArray(function(err, dat) {	      
-          res.render('resultado.html',{termino:termino,dat:dat,data:data});
+          res.render('resultado.html',{termino:termino,dat:dat,data:data,titulo:"SweetMimi"});
           db.close()       
           
         });

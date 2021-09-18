@@ -194,6 +194,10 @@ div.none{
     
 }
 
+#correo{
+    display: none;
+}
+
 @media(max-width: 952px){
     #logo{
         font-size: 30px;
@@ -372,6 +376,21 @@ div.none{
         text-align: center;
         margin: 19px;
         float: left;
+    }
+
+    #correo{
+        display: block;
+        float: left;
+    }
+
+    #correo a{
+        font-size: 10px;
+        text-decoration: none;
+        margin-left: 5px;
+    }
+
+    #correo a:hover{
+        color: darkmagenta;
     }
 
 
