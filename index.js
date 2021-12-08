@@ -4,9 +4,9 @@ var bodyParser = require('body-parser')
 var	app = express();
 app.use(express.static('public'));
 const imageToBase64 = require('image-to-base64');
-const port = process.env.PORT || 8080;
+const port = process.env.PORT || 8080; 
 
-const fileUpload = require('express-fileupload');
+const fileUpload = require('express-fileupload'); 
 app.use(fileUpload());
 app.use("/public/img", express.static('img'));
 
@@ -33,7 +33,7 @@ const mobile = require('is-mobile');
 
 
 const MongoClient = require('mongodb').MongoClient;
-const MONGO_URL = process.env.SONIURL;
+const MONGO_URL = process.env.SONIURL ;
 
 
 app.get('/', (req, res)=>{	  

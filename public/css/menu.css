@@ -10,6 +10,29 @@
     
 }
 
+
+#allbtn a{
+    text-decoration: none;
+    font-size: 18px;
+    color:lightpink;
+    font-family: 'Dancing Script';
+}
+
+#allbtn{
+    list-style: none;
+    font-size: 5px;
+    color: wheat;
+    background-color: white;
+    margin: 5px;
+    padding: 5px;
+    border-radius: 7px;
+}
+#allbtn:hover{
+    font-size: 15px;
+    background-color: deeppink;
+    color: white;
+}
+
 nav, main, footer{
     width: 100vw;
 }
@@ -332,12 +355,30 @@ div.none{
         color: deeppink;
     }
 
-    #All{
-        
-        padding: 1px;
+    #All{        
+        padding: 5px;
+        margin-top: 10px;
     }
     #All a {
         font-size: 23px;
+    }
+    #allbtn a{
+        text-decoration: none;
+        font-size: 18px;
+        color:lightpink;
+        font-family: 'Dancing Script';
+    }
+
+    #allbtn{
+        list-style: none;
+        font-size: 5px;
+        color: wheat;
+        background-color: white;
+    }
+    #allbtn:hover{
+        font-size: 15px;
+        background-color: deeppink;
+        color: white;
     }
 
     #media{

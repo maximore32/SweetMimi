@@ -10,6 +10,13 @@
 h1{
     color: #055160;
 }
+
+#h2°,h2{
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: darkmagenta;
+    padding: 1px;
+    
+}
 #contenedor{
     width: 100%;
     margin: 0 auto;
