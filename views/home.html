@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/anima.css">      
     <script src="../js/app.js" defer></script>
     <script src="../js/slider.js" defer></script>
+    <script src="../js/alerta.js" defer></script>
     
     <script src="../js/video.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -30,9 +31,10 @@
       if('serviceWorker' in navigator){
         navigator.serviceWorker.register('sw.js');
       }
-  </script>  
+  </script>
+   <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
-<body id="body">
+<body id="body" onload="alerta()">
   
     <div id="contenedor">
         {% include "header.html" %}
@@ -47,10 +49,7 @@
         </div>
 
             <div id="texto">
-                <p>Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el 
-                  resto de nuestra propuesta, con una selección de entradas,
-                   platos y postres que harán de su reunión un momento único en cada uno de sus pasos.
-                </p>
+                <p>{{text}}</p>
             </div>           
             
             <div id="slider">

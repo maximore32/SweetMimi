@@ -29,8 +29,22 @@
 }
 #allbtn:hover{
     font-size: 15px;
-    background-color: deeppink;
+    background-color: indigo;
     color: white;
+}
+
+.swal-title{
+    background-color: lightpink;
+    color: whitesmoke;
+    font-family:pacifico;
+}
+.swal-text{
+    color: indigo;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 15px;
+}
+.swal-button{
+    background-color: lightpink;
 }
 
 nav, main, footer{

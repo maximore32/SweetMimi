@@ -18,12 +18,12 @@ if (!fs.existsSync(dir)){
 }
 
 nunjucks.configure('views', {
-  autoescape: true,
+  autoescape: true,  
   express: app
 });
 
 app.use(bodyParser.json())
-app.use(bodyParser.urlencoded({ extended: true }))
+app.use(bodyParser.urlencoded({ extended: true })) 
 
 app.use(express.json());
 app.use(express.urlencoded({extended: false}));
@@ -52,7 +52,7 @@ app.get('/', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('home.html',{data:data,titulo:"SweetMimi"});
+      res.render('home.html',{data:data,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."});
       db.close()
     }) 
   })
