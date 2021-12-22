@@ -33,13 +33,16 @@ const mobile = require('is-mobile');
 
 
 const MongoClient = require('mongodb').MongoClient;
+const { text } = require('body-parser');
 const MONGO_URL = process.env.SONIURL ;
+
+
 
 
 app.get('/', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
   const dbo = db.db("testsoni"); 
-  const data = [];   
+  const data = [];
   // Consultamos los platos
   dbo.collection("dulce").find().toArray()
   .then((dataplatos) => { 
@@ -76,7 +79,7 @@ app.get('/Videos', (req, res)=>{
     .then((datacategorias) => { 
 // en data[1] quedan los categorias
       data.push(datacategorias)      
-      res.render('video.html',{data:data,titulo:"SweetMimi"});
+      res.render('video.html',{data:data,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."});
       db.close()
     }) 
   })
@@ -90,50 +93,47 @@ app.get('/Productos', (req, res)=>{
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
   const dbo = db.db("testsoni"); 
   const data = [];   
-  // Consultamos los platos
+  
   dbo.collection("dulce").find().toArray()
   .then((dataplatos) => { 
-// en data[0] quedan los platos
+
     data.push(dataplatos)
   }) 
   .then(() => {
-  //Consultamos en la base las categorías
+ 
     dbo.collection("categorias").find().toArray()
     .then((datacategorias) => { 
-// en data[1] quedan los categorias
+
       data.push(datacategorias)      
-      res.render('all.html',{data:data,titulo:"SweetMimi"});
+      res.render('all.html',{data:data,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."});
       db.close()
     }) 
   })
 });
 });
 
-// Ruta individual del plato
+
 app.get('/plato/:id', (req, res)=>{	  
   MongoClient.connect(MONGO_URL,{ useUnifiedTopology: true }, (err, db) => {  
   const dbo = db.db("testsoni");
   const data = [];
-  // Obtenemos la id de la URL y la convertimos a entero
+  
   var id = parseInt(req.params.id);
   dbo.collection("dulce").find().toArray()
   .then((dataplatos) => { 
-// en data[0] quedan los platos
   data.push(dataplatos)
   })
       .then(() => {
-        //Consultamos en la base las categorías
-          dbo.collection("categorias").find().toArray()
+           dbo.collection("categorias").find().toArray()
           .then((datacategorias) => { 
-      // en data[1] quedan los categorias
+      
             data.push(datacategorias)                 
           }) 
         })
      .then(()=>{
-         // Buscamos en la base con un findeOne el plato
-  dbo.collection("dulce").findOne({"id":id},function(err, dati) {   	
-    if (dati){     
-          res.status(200).render('producto.html',{data:data,id:dati.id,plato:dati.Nombre,img:dati.Imagen,descripcion:dati.Descripción,categoria:dati.Categoria,precio:dati.Precio,titulo:"SweetMimi"}
+          dbo.collection("dulce").findOne({"id":id},function(err, dati) {   	
+         if (dati){     
+          res.status(200).render('producto.html',{data:data,id:dati.id,plato:dati.Nombre,img:dati.Imagen,descripcion:dati.Descripción,categoria:dati.Categoria,precio:dati.Precio,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."}
           );	
       }else{
           res.status(404).send(`<p>ERROR</p>`)
@@ -151,22 +151,22 @@ app.get('/categoria/:cat', (req, res)=>{
       const data = [];  
   dbo.collection("dulce").find().toArray()
   .then((dataplatos) => { 
-// en data[0] quedan los platos
+
   data.push(dataplatos)
   })
       .then(() => {
-        //Consultamos en la base las categorías
+        
           dbo.collection("categorias").find().toArray()
           .then((datacategorias) => { 
-      // en data[1] quedan los categorias
+      
             data.push(datacategorias)                 
           }) 
         })
     .then(()=>{
-      // Buscamos en platos y filtramos por su categoría para mostrarlos
+      
     dbo.collection("dulce").find({"Categoria":req.params.cat}).toArray()
     .then((dato) => {      
-    res.render('categoria.html',{data:data,dato:dato,categoria:req.params.cat,titulo:"SweetMimi"});
+    res.render('categoria.html',{data:data,dato:dato,categoria:req.params.cat,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."});
     db.close()
     
     })
@@ -302,7 +302,7 @@ app.post('/altacategoria', (req, res)=>{
 })
 
 
-// Buscador de personajes
+// Buscador
 app.get('/Resultado', (req, res)=>{
       //Obtenemos el valor del término de búsqueda. El que viene luego de ?
       var termino = req.query.busqueda;  
@@ -329,7 +329,7 @@ app.get('/Resultado', (req, res)=>{
       .then(()=>{
         const dbo = db.db("testsoni");    
         dbo.collection("dulce").find({"Nombre":{$regex: expresiontermino }}).toArray(function(err, dat) {	      
-          res.render('resultado.html',{termino:termino,dat:dat,data:data,titulo:"SweetMimi"});
+          res.render('resultado.html',{termino:termino,dat:dat,data:data,titulo:"SweetMimi",text:"Nuestros servicios especiales para eventos y reuniones brindan la misma calidad y cuidado de los detalles que el resto de nuestra propuesta, con una selección de entradas,platos y postres que harán de su reunión un momento único en cada uno de sus pasos."});
           db.close()       
           
         });
